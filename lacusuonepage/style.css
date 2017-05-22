@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, e-commerce, blog, portfolio
 Text Domain: seopress
-Template: SEOPress
+Template: seopress
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -19,60 +19,3 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*
 * Do not write your css code here instead use Dashboard > Appearance > Customize > Additional CSS option.
 */
-
-html * {
-    /*font-size: 1em !important;*/
-    /*color: #000 !important;*/
-    font-family: Arial !important;
-}
-
-html h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: 10px;
-}
-
-h1,
-.h1 {
-    font-size: 20px;
-}
-
-h2,
-.h2 {
-    font-size: 18px;
-}
-
-h3,
-.h3 {
-    font-size: 16px;
-}
-
-h4,
-.h4 {
-    font-size: 14px;
-}
-
-h5,
-.h5 {
-    font-size: 12px;
-}
-
-h6,
-.h6 {
-    font-size: 10px;
-}
-
-
-/* =20px */
-
-.product {
-    float: left;
-    margin: 10px;
-    padding: 2px;
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-}

@@ -1,0 +1,74 @@
+/* ------The Style sheet for child theme ----*/
+
+html * {
+    /*font-size: 1em !important;*/
+    /*color: #000 !important;*/
+    font-family: Arial !important;
+}
+
+ol, ul, li { list-style: none outside none; }
+
+h1 {
+    font-size: 20px !important;
+}
+
+h2 {
+    font-size: 18px !important;
+}
+
+h3 {
+    font-size: 16px !important;
+    text-transform: inherit !important;
+}
+
+h4 {
+    font-size: 14px !important;
+}
+
+h5 {
+    font-size: 12px !important;
+}
+
+h6 {
+    font-size: 10px !important;
+}
+
+
+/* =20px */
+
+.main_product {
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    margin-bottom: 10px;
+    clear: both;
+    overflow: hidden;
+}
+
+.tabbox {overflow:visible; height:auto; margin-bottom:0;}
+.tabbox ul li {float:none; border-bottom:1px solid #d7d7d7;}
+.tabbox ul li a {background:#eee; color:#333; padding:5px 20px;}
+.tabbox ul li a.active {margin-right:0px; background:#585858; color:#fff;}
+.tabbox ~ ul {border:0px solid #6e9b14; margin-bottom:10px;}
+
+
+/*================================= Vertical Item ======================================*/
+ul.veritem { padding:5px;}
+ul.veritem li { clear:both; overflow:hidden; border-bottom:1px solid #cacaca; padding-bottom:10px;margin-bottom:10px;}
+ul.veritem li .pd-img { width:200px;float:left; margin-right:10px; min-height:220px; position:relative}
+ul.veritem li .pd-img img { max-width:200px; max-height:220px;}
+
+ul.veritem li .pd-ctn .pd-btn { margin:8px 0;}
+ul.veritem li .pd-ctn .rating .info_rating span { font-size:11px; padding:3px 8px}
+ul.veritem li .pd-ctn .pd-btn a { line-height:32px; padding:5px 10px; margin-right:15px;}
+ul.veritem li .pd-ctn .pd-btn a.buy {background:#4BB0BB; color:#fff; font-weight:normal;font-size:11px;word-wrap:break-word; width:100px; hfloat: left;}
+ul.veritem li .pd-ctn .pd-btn a.buy:hover { text-decoration:underline; background:#333}
+ul.veritem li .pd-ctn .pd-btn a.check { color:#069}
+ul.veritem li .pd-ctn .pd-btn a.check:hover { background-position:0 -19px;}
+ul.veritem li .pd-ctn h2.pd-tit { width:75%;}
+ul.veritem li .pd-ctn .price { margin:10px 0; font-weight:bold}
+ul.veritem li .pd-ctn .price .price-sale { color:#F00; padding-right:10px; font-size:14px; display:block; padding-bottom:5px}
+ul.veritem li .pd-ctn .price .price-nosale { text-decoration:line-through; color:#666; font-weight:normal}
+
+
+/*=========================================================*/
