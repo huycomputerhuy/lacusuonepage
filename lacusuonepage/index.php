@@ -90,10 +90,10 @@
 	            	</div> <!-- End tabtitle --> 
 	     <?php        	
 	                get_template_part( 'template-parts/category', 'loop' );
-	            }
 	     ?>
 	            </div>
 	      <?php
+	            }
 	        } 
 	        else
 			{
