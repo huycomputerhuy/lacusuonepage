@@ -10,28 +10,9 @@
     $count = 0;
 ?>
 
-    <ul class='veritem clearfix' id="post-<?php echo $cat_id ?>" >
+    <ul class='veritem clearfix' id="cat-<?php echo $cat_id ?>" >
 <?php
     	$pro_per_catogory = 8;
-
-    	function product_price($priceFloat) {
-			$symbol = 'VNĐ';
-			$symbol_thousand = '.';
-			$decimal_place = 0;
-			$price = number_format($priceFloat, $decimal_place, '', $symbol_thousand);
-			return $price.$symbol;
-		}
-
-		function convert_price($price){
-			// TODO: need to improve
-			if (is_numeric($element)) {
-				$price = str_replace('.', '', $price);  
-				return str_replace(',', '', $price);  
-			}else{
-				return 0;
-			}
-		}
-
 	    while ($wp_query->have_posts()) : 
 	    	$wp_query->the_post(); 
 	        if($count == $pro_per_catogory){
@@ -40,13 +21,11 @@
 	    	$count++;
 	    	$price =  get_post_meta( $post->ID, 'wpcf-don-gia', true );
 	    	$discount = get_post_meta( $post->ID, 'wpcf-giam-gia', true );
-	    	$sale_price = $price;
-	    	if($discount){
-	    		$sale_price = $price * ($discount/100);
-	    	}
+	    	$sale_price_info = cal_pro_price($price, $discount);
 ?>		
         	<li>
                 <div class="pd-img">
+                	<span class="pd-promotion"><?php echo '-'. $discount . '%'?></span>
                     <?php the_post_thumbnail( array('class' => 'product-thumb') ); ?>
                 </div>
                 <div class="pd-ctn">
@@ -66,10 +45,14 @@
 
                     	</a>
                     </h2>
+                    <div class="price">
+                    	<?php if($sale_price_info['discount']){ ?>
+                        <span class="price-sale" ><?php echo convert2VND($price) ?></span>
+                        <?php } ?>
+
+                        <span class="price-discount" ><?php echo $sale_price_info['sale_price'] ?></span>
+                    </div>
                     <div class="info">
-
-                        <p style="margin-top: 5px;"><?php echo get_post_meta( $post->ID, 'wpcf-don-gia', true ); ?></p>
-
                         <p class="product-status"><?php echo get_post_meta( $post->ID, 'wpcf-xuat-xu', true ); ?></p>
                         <a class="order-button" href="<?php the_permalink();?>">Xem chi tiết</a>
                     </div>

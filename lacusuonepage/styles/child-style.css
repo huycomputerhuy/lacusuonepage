@@ -166,7 +166,7 @@ ul.veritem li .pd-ctn .price .price-sale {
     padding-bottom: 5px
 }
 
-ul.veritem li .pd-ctn .price .price-nosale {
+ul.veritem li .pd-ctn .price .price-discount {
     text-decoration: line-through;
     color: #666;
     font-weight: normal
@@ -197,7 +197,7 @@ ul.veritem li .pd-ctn .price .price-sale {
     font-size: 11px;
 }
 
-ul.veritem li .pd-ctn .price .price-nosale {
+ul.veritem li .pd-ctn .price .price-discount {
     color: #FF0000;
     display: block;
     font-size: 14px;
@@ -251,7 +251,7 @@ span.pd-promotion {
     font-size: 12px;
     font-weight: bold;
     height: 55px;
-    right: 0;
+    right: 5;
     top: 0px;
     line-height: 40px;
     position: absolute;

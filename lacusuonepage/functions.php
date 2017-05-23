@@ -27,4 +27,35 @@
     //     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
     // }
 
+    function convert2VND($priceFloat) {
+            $symbol = ' VNĐ';
+            $symbol_thousand = '.';
+            $decimal_place = 0;
+            $price = number_format($priceFloat, $decimal_place, '', $symbol_thousand);
+            return $price.$symbol;
+        };
+
+    function convert_price($price){
+        // TODO: need to improve
+        $price = str_replace('.', '', $price);  
+        $price = str_replace(',', '', $price);  
+        if (is_numeric($price)) {
+           return $price;
+        }else{
+            return 0;
+        }
+    }
+
+    function cal_pro_price($price, $discountPer){
+        $sale_price = convert_price($price);
+        $sale_price_info['discount'] = false;
+        if($discountPer){
+            $sale_price_info['discount'] = true;
+            $sale_price = $sale_price - $sale_price * ($discountPer/100);
+        }
+        $sale_price_info['sale_price'] =  convert2VND($sale_price);
+
+        return $sale_price_info;
+    }
+
 ?>
