@@ -25,7 +25,9 @@
 ?>		
         	<li>
                 <div class="pd-img">
-                	<span class="pd-promotion"><?php echo '-'. $discount . '%'?></span>
+                	<?php if($sale_price_info['discount']){ ?>
+                		<span class="pd-promotion"><?php echo '-'. $discount . '%'?></span>
+                    <?php } ?>
                     <?php the_post_thumbnail( array('class' => 'product-thumb') ); ?>
                 </div>
                 <div class="pd-ctn">

@@ -28,6 +28,7 @@
     // }
 
     function convert2VND($priceFloat) {
+            $priceFloat = convert_price($priceFloat);
             $symbol = ' VNĐ';
             $symbol_thousand = '.';
             $decimal_place = 0;
