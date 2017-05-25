@@ -26,26 +26,26 @@
         	<li>
                 <div class="pd-img">
                 	<?php if($sale_price_info['discount']){ ?>
-                		<span class="pd-promotion"><?php echo '-'. $discount . '%'?></span>
+                	<span class="pd-promotion"><?php echo '-'. $discount . '%'?></span>
                     <?php } ?>
                     <?php the_post_thumbnail( array('class' => 'product-thumb') ); ?>
                 </div>
                 <div class="pd-ctn">
                     <h2 class="pd-tit">
                     	<a href="<?php the_permalink(); ?>"><?php the_title(); ?> 
-                    		<?php if(get_post_meta($post->ID, "wpcf-san-pham-moi")[0] == 1) { ?>
-	                    	<span>	
-	                    		<img class="pro_new_icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pro_new.gif">
-	                    	</span>
-	                    	<?php } ?>
-
-	                    	<?php if(get_post_meta($post->ID, "wpcf-san-pham-hot")[0] == 1) { ?>
-	                    	<span>	
-	                    		<img class="pro_new_icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pro_hot.gif">
-	                    	</span>
-	                    	<?php } ?>
-
                     	</a>
+                		<?php if(get_post_meta($post->ID, "wpcf-san-pham-moi")[0] == 1) { ?>
+                    	<span>	
+                    		<img class="pro_new_icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pro_new.gif">
+                    	</span>
+                    	<?php } ?>
+
+                    	<?php if(get_post_meta($post->ID, "wpcf-san-pham-hot")[0] == 1) { ?>
+                    	<span>	
+                    		<img class="pro_new_icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pro_hot.gif">
+                    	</span>
+                    	<?php } ?>
+
                     </h2>
                     <div class="price">
                     	<?php if($sale_price_info['discount']){ ?>
@@ -54,10 +54,20 @@
 
                         <span class="price-discount" ><?php echo $sale_price_info['sale_price'] ?></span>
                     </div>
-                    <div class="info">
-                        <p class="product-status"><?php echo get_post_meta( $post->ID, 'wpcf-xuat-xu', true ); ?></p>
-                        <a class="order-button" href="<?php the_permalink();?>">Xem chi tiết</a>
+               		<?php /*
+                    $made_in = get_post_meta( $post->ID, 'wpcf-xuat-xu', true );
+                    if($made_in){
+               		*/?>
+                    <!-- <div class="pd-made-in"> -->
+                        <?php// echo 'Xuất xứ: '. $made_in ?>
+                    <!-- </div> -->
+             	   <?php	//} ?>
+                    <div class="pd-btn">
+                        <a class="order seopressbtn" style="cursor: pointer;" href="<?php the_permalink();?>">
+                        	Mua hàng
+                        </a>
                     </div>
+                    <div class="pd-text"> <?php echo get_post_meta($post->ID, "wpcf-tom-tat-san-pham", true) ?> </div>
                 </div>
        		</li>
 		<?php endwhile; ?>

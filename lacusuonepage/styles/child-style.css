@@ -130,19 +130,19 @@ ul.veritem li .pd-ctn .pd-btn a {
     margin-right: 15px;
 }
 
-ul.veritem li .pd-ctn .pd-btn a.buy {
-    background: #4BB0BB;
+ul.veritem li .pd-ctn .pd-btn a.order {
     color: #fff;
     font-weight: normal;
     font-size: 11px;
     word-wrap: break-word;
     width: 100px;
     hfloat: left;
+    line-height: 20px;
 }
 
-ul.veritem li .pd-ctn .pd-btn a.buy:hover {
+ul.veritem li .pd-ctn .pd-btn a.order:hover {
     text-decoration: underline;
-    background: #333
+    /*background: #333*/
 }
 
 ul.veritem li .pd-ctn .pd-btn a.check {
@@ -201,7 +201,7 @@ ul.veritem li .pd-ctn .price .price-discount {
     color: #FF0000;
     display: block;
     font-size: 14px;
-    padding-bottom: 5px;
+    line-height: 10px;
     padding-right: 10px;
     font-weight: bold;
     text-decoration: inherit;
@@ -229,17 +229,33 @@ ul.veritem li .pd-ctn h2.pd-tit {
     line-height: 1.1;
     color: inherit;
     font-size: 16px;
+    margin-top: 0px;
+    padding-top: 0px;
+    overflow-wrap: break-word;
 }
 
 ul.veritem li {
     clear: none;
     overflow: inherit;
     border-bottom: 1px solid #cacaca;
-    padding-bottom: 10px;
+    padding: 0px 10px 9px 0px;
     margin-bottom: 10px;
-    height: 235px;
+    height: 230px;
     float: left;
-    width: 363px;
+    width: 50%;
+}
+
+ul.veritem li .pd-ctn .pd-text {
+    font-size: 13px;
+    max-height: 92px;
+    min-height: 67px;
+    overflow: hidden;
+}
+
+ul.veritem li .pd-ctn .pd-made-in {
+    /*max-height: 67px;
+    min-height: 67px;
+    overflow: hidden;*/
 }
 
 .pro_new_icon {

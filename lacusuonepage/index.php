@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="<?php if( get_theme_mod( 'seopress_blog_archive_layout', 'rights' ) == 'rights' ) { echo 'col-md-8'; } else { echo 'col-md-12'; } ?>">
+<div class="<?php if( get_theme_mod( 'seopress_blog_archive_layout', 'rights' ) == 'rights' ) { echo 'col-md-9'; } else { echo 'col-md-12'; } ?>">
 	<div class="left-content" >
 		
 		<?php if( is_category() ) { ?>
