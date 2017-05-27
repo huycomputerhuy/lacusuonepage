@@ -5,9 +5,9 @@
 		<?php if( is_category() ) { ?>
 		<div class="content-first">
 			
-			<div class="content-second">
-				<h1 class="the-title"><?php printf( __( 'Category Archives: %s', 'seopress' ), single_cat_title( '', false ) ); ?></h1>
-			</div>
+			<!-- <div class="content-second">
+				<h1 class="the-title"><?php //printf( __( 'Category Archives: %s', 'seopress' ), single_cat_title( '', false ) ); ?></h1>
+			</div> -->
 				
 			<?php
 			// Show an optional term description.
@@ -84,7 +84,7 @@
 	   				<div class="tabbox">
 	   					<ul class="tablist">
 	   						<li>
-	   							<a href='<?php echo get_category_link($category->term_id)?>'><?php echo $category->name ?></a>
+	   							<a class="seopressbtn" href='<?php echo get_category_link($category->term_id)?>'><?php echo $category->name ?></a>
 	   						</li>
 	   					</ul>
 	            	</div> <!-- End tabtitle --> 

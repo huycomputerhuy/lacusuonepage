@@ -56,14 +56,19 @@ h6 {
     margin-bottom: 0;
 }
 
+.tablist {
+    padding-left: 0px;
+}
+
 .tabbox ul li {
     float: none;
     border-bottom: 1px solid #d7d7d7;
 }
 
 .tabbox ul li a {
-    background: #eee;
-    color: #333;
+    margin-left: 5px;
+    background: #337ab7;
+    color: #fff;
     padding: 5px 20px;
 }
 
