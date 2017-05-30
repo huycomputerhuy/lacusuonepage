@@ -1,26 +1,111 @@
-<div class="main_product"><!--Begin main_product-->
-     <div class="tabbox">
-        <ul class="tablist">
-            <li id="tabs_0"><a class="click0 active" val="21" key="product">Giàn Phơi Thông Minh GIÁ RẺ</a></li>                        </ul>
-    </div><!--End tabbox -->                           
-    <ul class="veritem clearfix" id="0product">        
-        <li>
-            <div class="pd-img">                
-                <a href="http://gianphoinhapkhau.vn/san-pham/cac-mau-gian-phoi-cao-cap-khac.html">
-                <img src="http://gianphoinhapkhau.vn/profiles/gianphoinhapkhauvn/uploads/attach/thumbnail/p1470946055_dr6221lapthucte.jpg" alt="Các mẫu GIÀN PHƠI CAO CẤP khác" title="Các mẫu GIÀN PHƠI CAO CẤP khác"></a>                </div>
-            <div class="pd-ctn">
-                    <h2 class="pd-tit">
-                        <a href="http://gianphoinhapkhau.vn/san-pham/cac-mau-gian-phoi-cao-cap-khac.html">Các mẫu GIÀN PHƠI CAO CẤP khác<span><img src="http://gianphoinhapkhau.vn/public/images/icons_system/icon8.gif" title="icon8" alt="icon8"></span></a>
-                    </h2>                 
-                    <div class="price">                     
-                        <span class="price-nosale"></span>                    
-                    </div>                        
-                    <div class="pd-btn">                               
-                        <span style="opacity:0.4;filter:alpha(opacity=40);">
-                            <a class="buy" onclick="#" style="cursor: pointer;">Mua hàng</a>
-                        </span>                       
-                    </div>
-                    <div class="pd-text">Các mẫu Giàn Phơi Cao Cấp Nhập Khẩu đẹp, chất lượng cao, mẫu đa dạng, giá cả hợp lý được nhập khẩu từ Thái Lan, Singapore, Hàn Quốc để khách hàng lựa chọn được sản phẩm ứng ý.</div>
-            </div>
-        </li>           
+<?php 
+/*
+    Template Name: Main Shop
+*/
+get_header(); ?>
+<div class="<?php if( get_theme_mod( 'seopress_blog_archive_layout', 'rights' ) == 'rights' ) { echo 'col-md-9'; } else { echo 'col-md-12'; } ?>">
+    <div class="left-content" >
         
+        <?php if( is_category() ) { ?>
+        <div class="content-first">
+            
+            <!-- <div class="content-second">
+                <h1 class="the-title"><?php //printf( __( 'Category Archives: %s', 'seopress' ), single_cat_title( '', false ) ); ?></h1>
+            </div> -->
+                
+            <?php
+            // Show an optional term description.
+            if( term_description() )
+            {
+                printf( '<div class="content-third">%s</div>', term_description() );
+            }
+            ?>
+                
+        </div>
+        <?php } ?>
+        
+        
+        <?php if( is_tag() ) { ?>
+        <div class="content-first">
+            
+            <div class="content-second">
+                <h1 class="the-title"><?php printf( __( 'Tag Archives: %s', 'seopress' ), single_tag_title( '', false ) ); ?></h1>
+            </div>
+                
+            <?php
+            // Show an optional term description.
+            if( term_description() )
+            {
+                printf( '<div class="content-third">%s</div>', term_description() );
+            }
+            ?>
+                
+        </div>
+        <?php } ?>
+        
+        
+        <?php if( is_author() ) { ?>
+        <div class="content-first">
+            
+            <div class="content-second">
+                <h1 class="the-title"><?php printf( __( 'Author Archives: %s', 'seopress' ), get_the_author() ); ?></h1>
+            </div>
+                
+            <?php
+            // Show an optional term description.
+            if( get_the_author_meta( 'description' ) )
+            {
+            ?>
+                <div class="content-third"><p><?php the_author_meta( 'description' ); ?></p></div>
+            <?php
+            }
+            ?>
+                
+        </div>
+        <?php } ?>
+        
+        
+        <?php if( is_search() ) { ?>
+        <div class="content-first">
+            
+            <div class="content-second">
+                <h1 class="the-title"><?php printf( __( 'Search Results for: %s', 'seopress' ), get_search_query() ); ?></h1>
+            </div>
+                
+        </div>
+        <?php } ?>
+
+        <?php
+        
+            $categories = get_categories(array(
+                'parent' => 0,
+                'hide_empty' => 1
+            ));
+            if($categories){
+                foreach ($categories as $category) {
+         ?>
+                <div class="main_product">
+                    <div class="tabbox">
+                        <ul class="tablist">
+                            <li>
+                                <a class="seopressbtn" href='<?php echo get_category_link($category->term_id)?>'><?php echo $category->name ?></a>
+                            </li>
+                        </ul>
+                    </div> <!-- End tabtitle --> 
+         <?php          
+                    get_template_part( 'template-parts/category', 'loop' );
+         ?>
+                </div>
+          <?php
+                }
+            } 
+            else
+            {
+                get_template_part( 'template-parts/content', 'none' );
+            }
+        ?>
+        
+    </div>
+</div>
+<?php if( get_theme_mod( 'seopress_blog_archive_layout', 'rights' ) == 'rights' ) { get_sidebar(); } ?>
+<?php get_footer(); ?>

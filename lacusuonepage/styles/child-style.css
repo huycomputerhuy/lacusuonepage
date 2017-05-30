@@ -13,7 +13,7 @@ li {
 }
 
 h1 {
-    font-size: 20px !important;
+    font-size: 20px;
 }
 
 h2 {
@@ -36,6 +36,10 @@ h5 {
 
 h6 {
     font-size: 10px !important;
+}
+
+ul.navbar-nav li a {
+    font-size: 18px;
 }
 
 
@@ -186,7 +190,7 @@ ul.veritem li .pd-ctn .price .price-discount {
 }
 
 .pd_detail_top {
-    min-height: 470px !important;
+    min-height: 200px !important;
 }
 
 
@@ -237,6 +241,7 @@ ul.veritem li .pd-ctn h2.pd-tit {
     margin-top: 0px;
     padding-top: 0px;
     overflow-wrap: break-word;
+    text-transform: inherit;
 }
 
 ul.veritem li {
@@ -286,3 +291,145 @@ span.pd-promotion {
 
 
 /*end - function CSS*/
+
+@media (max-width: 767px) {
+    .main_product ul.listitem li div.pd-home div.pd-btn {
+        height: 33px;
+    }
+    .main_product ul.listitem li div.pd-home div.pd-btn a {
+        padding: 3px;
+        margin: 0;
+    }
+    .main_product ul.listitem li div.pd-home div.pd-btn a.check {
+        background: none;
+        padding: 3px;
+    }
+    .main_product ul.item_four li {
+        width: 50%;
+        border-bottom: 1px dotted #eee;
+    }
+    .main_product ul.item_three li {
+        width: 50%;
+        border-bottom: 1px dotted #eee;
+    }
+    .main_product ul.item_three.item_square li div.pd-home a img {
+        width: 100%;
+    }
+    .main_product ul.item_square.item_three li div.pd-home .pd-img {
+        height: 150px;
+    }
+    .main_product ul.item_square.item_three li div.pd-home {
+        min-height: 273px;
+    }
+    .main_product ul.item_three li div.pd-home {
+        min-height: 293px;
+    }
+    .main_product ul.item_three li div.pd-home .pd-img {
+        height: 170px;
+    }
+    .main_product ul.item_three li div.pd-home .pd-img img {
+        width: 100%;
+    }
+    span.pd-promotion {
+        right: 0px;
+    }
+    ul.veritem li .pd-ctn {
+        display: block !important;
+        width: 100% !important;
+        float: none;
+    }
+    ul.veritem li .pd-ctn h2.pd-tit {
+        width: 100% !important;
+        margin-top: 5px;
+    }
+    ul.veritem li .pd-img {
+        width: 100%;
+        height: auto !important;
+        float: left;
+        margin-right: 10px;
+        display: block;
+        float: none;
+    }
+    ul.veritem li .pd-img img {
+        max-width: 100%;
+    }
+    ul.veritem li .pd-ctn .pd-btn {
+        position: static;
+    }
+    ul.veritem li {
+        width: 100%;
+        height: auto;
+        text-align: left
+    }
+    ul.veritem li .pd-img {
+        min-height: 50px;
+        float: left;
+        display: inline-block;
+        width: 120px;
+        min-height: 140px;
+    }
+    ul.veritem li .pd-img img {
+        width: 100%;
+    }
+    ul.veritem li .pd-ctn {
+        float: none;
+    }
+    ul.veritem li .pd-ctn .pd-btn a {
+        padding: 5px 5px;
+        margin-right: 8px;
+    }
+    ul.veritem li .pd-ctn .pd-btn a.check {
+        padding: 2px 0 3px 25px;
+    }
+    ul.veritem li .pd-ctn .pd-text {
+        min-height: 20px;
+    }
+    ul.veritem li .pd-ctn .price .price-discount {
+        line-height: 15px;
+    }
+}
+
+
+/*chi tiet san pham*/
+
+.pd_detail_top .info_detail .pd-sum {
+    padding: 5px;
+    line-height: 22px;
+    border: 1px solid #f1db7c;
+    background: #fdf5d3;
+    margin: 5px 0;
+    border-top: 5px solid #337ab7
+}
+
+.pd_detail_top .info_detail .pd-sum span {
+    color: #978122;
+    font-weight: bold
+}
+
+.pd_detail_top .info_detail .pd-tit {
+    text-transform: inherit;
+}
+
+.pd_detail_top .info_detail .price {
+    margin: 10px 0;
+    font-weight: bold
+}
+
+.pd_detail_top .info_detail .price .price-sale {
+    color: #F00;
+    padding-right: 10px;
+    font-size: 14px;
+    display: block;
+    padding-bottom: 5px
+}
+
+.pd_detail_top .info_detail .price .price-discount {
+    text-decoration: line-through;
+    color: #666;
+    font-weight: normal
+}
+
+.pd_detail_top .info_detail .pd-made-in {
+    margin: 10px 0;
+    font-weight: bold
+}

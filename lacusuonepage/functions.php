@@ -53,11 +53,19 @@
         $sale_price_info['discount'] = false;
         if($discountPer){
             $sale_price_info['discount'] = true;
+            $sale_price_info['price'] =  convert2VND($sale_price);
             $sale_price = $sale_price - $sale_price * ($discountPer/100);
+            $sale_price_info['discount_num'] =  $discountPer;
         }
         $sale_price_info['sale_price'] =  convert2VND($sale_price);
 
         return $sale_price_info;
+    }
+
+    function get_sale_price ($pro_id) {
+        $price =  get_post_meta( $pro_id, 'wpcf-don-gia', true );
+        $discount = get_post_meta( $pro_id, 'wpcf-giam-gia', true );
+        return cal_pro_price($price, $discount);
     }
 
 ?>
