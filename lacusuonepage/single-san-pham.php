@@ -3,7 +3,7 @@
 <?php
 if( get_theme_mod( 'seopress_breadcrumbx_setting', '1' ) == '1' )
 {
-	seopress_press_breadcrumbs();
+	lacusu_breadcrumbs();
 }
 ?>
 

@@ -1,8 +1,15 @@
 <?php
 	$product_class_name = "product container-fluid"; 	
 	global $category;
-	$cat_id = $category->term_id;
-	$cat_name = $category->name;
+    $pro_per_catogory = 8;
+    if(empty($category)){
+        global $cat_id;
+        $pro_per_catogory = 0;        
+    }else{
+	   $cat_id = $category->term_id;
+
+    }
+	// $cat_name = $category->name;
     $temp = $wp_query;
     $wp_query = null;
     $wp_query = new WP_Query();
@@ -12,10 +19,10 @@
 
     <ul class='veritem clearfix' id="cat-<?php echo $cat_id ?>" >
 <?php
-    	$pro_per_catogory = 8;
+    	
 	    while ($wp_query->have_posts()) : 
 	    	$wp_query->the_post(); 
-	        if($count == $pro_per_catogory){
+	        if($pro_per_catogory != 0 && $count == $pro_per_catogory){
 	            break;
 	    	}
 	    	$count++;
@@ -63,16 +70,43 @@
                     <!-- </div> -->
              	   <?php	//} ?>
                     <div class="pd-btn">
-                        <a class="order seopressbtn" style="cursor: pointer;" href="<?php the_permalink();?>">
+                        <a class="order seopressbtn" style="cursor: pointer;" data-toggle="modal" data-target="#myModal">
                         	Mua hàng
                         </a>
                     </div>
                     <div class="pd-text"> <?php echo get_post_meta($post->ID, "wpcf-tom-tat-san-pham", true) ?> </div>
                 </div>
        		</li>
-		<?php endwhile; ?>
+		<?php endwhile; 
+        if($count == 0){
+        ?>
+            <div class="pd-text">
+                <span><?php echo 'Sản phẩm đang được cập nhật...' ?></span>
+            </div>
+        <?php } ?>
 	</ul>
 <?php
     $wp_query = null;
     $wp_query = $temp;  // Reset
 ?>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Liên hệ đặt hàng</h4>
+      </div>
+      <div class="modal-body">
+        <p>Hotline 0901463986 - 0948855439</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+
+  </div>
+</div>
