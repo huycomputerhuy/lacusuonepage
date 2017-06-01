@@ -5,15 +5,27 @@
     if(empty($category)){
         global $cat_id;
         $pro_per_catogory = 0;        
+        $args = array( 
+            'post_type' => 'san-pham',
+            'cat' => $cat_id
+        );
     }else{
-	   $cat_id = $category->term_id;
+        $cat_id = $category->term_id;
+        $args = array( 
+            'post_type' => 'san-pham',
+            'cat' => $cat_id,
+            'meta_query' => array(
+                array(
+                    'key' => 'wpcf-hien-thi-trang-chu',
+                    'value' => 1,
+                    'compare' => '='
+            ))
 
+        );
     }
-	// $cat_name = $category->name;
     $temp = $wp_query;
     $wp_query = null;
-    $wp_query = new WP_Query();
-    $wp_query->query('cat='.$cat_id.'&post_type=san-pham'.'&paged='.$paged);
+    $wp_query = new WP_Query($args);
     $count = 0;
 ?>
 
