@@ -1,16 +1,25 @@
 /* ------The Style sheet for child theme ----*/
 
-html * {
-    /*font-size: 1em !important;*/
-    /*color: #000 !important;*/
-    font-family: Arial !important;
-}
-
+/*Reset CSS*/
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
 ol,
 ul,
-li {
+li 
+ {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
     list-style: none outside none;
 }
+
 
 h1 {
     font-size: 20px;
@@ -408,6 +417,7 @@ span.pd-promotion {
 
 .pd_detail_top .info_detail .pd-tit {
     text-transform: inherit;
+    margin-top: 0px;
 }
 
 .pd_detail_top .info_detail .price {

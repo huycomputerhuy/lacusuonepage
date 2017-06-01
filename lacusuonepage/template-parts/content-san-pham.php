@@ -7,15 +7,14 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> itemscope itemtype="http://schema.org/CreativeWork">
 	<div class="content-first">
 		<div class="content-second">
-			<!-- <h1 class="the-title entry-title" itemprop="headline"><?php\\ the_title(); ?></h1> -->
 			<div class="page_pd_detail">
 				<div class="pd_detail_top">
 					<div class="img_detail left col-xs-12 col-sm-5 col-md-4 col-lg-4">
 						<div class="img_detail_big">
 							<?php 
-							$iamges = get_post_meta($post->ID, "wpcf-hinh-anh-san-pham");
-							echo sizeof($iamges);
+							$images = get_post_meta($post->ID, "wpcf-hinh-anh-san-pham");
 							?>
+							<img src="<?php echo $images[0]?>" class="zoom_image" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
 						</div>
 					</div>
 					<div class="info_detail right col-xs-12  col-sm-7 col-md-8 col-lg-8">
@@ -50,10 +49,10 @@
 	                    </div>
 	             	   <?php } ?>
 	                    <div class="pd-btn">
-	                        <a class="order seopressbtn" style="cursor: pointer;" href="<?php the_permalink();?>">
+	                        <a class="order seopressbtn" style="cursor: pointer;" data-toggle="modal" data-target="#myModal">
 	                        	Mua hàng
 	                        </a>
-		                </div>
+	                    </div>
 		                <div class="pd-sum"> 
 		                 <span>Tóm tắt sản phẩm</span>
 		                 <p><?php echo get_post_meta($post->ID, "wpcf-tom-tat-san-pham", true) ?>
@@ -83,4 +82,30 @@
 				
 				
 	</div>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Liên hệ đặt hàng</h4>
+      </div>
+      <div class="modal-body">
+	      <span>Vui lòng gọi </span>
+	      <a href="tel:0901463986">0901463986</a>
+	      <span> hoặc </span>
+	      <a href="tel:0948855439">0948855439</a>
+        <!-- <p>Hotline 0901463986 - 0948855439</p> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+
+  </div>
 </div>
