@@ -47,7 +47,11 @@
                 	<?php if($sale_price_info['discount']){ ?>
                 	<span class="pd-promotion"><?php echo '-'. $discount . '%'?></span>
                     <?php } ?>
-                    <?php the_post_thumbnail( array('class' => 'product-thumb') ); ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php 
+                        the_post_thumbnail( array('class' => 'product-thumb') ); 
+                        ?>
+                    </a>
                 </div>
                 <div class="pd-ctn">
                     <h2 class="pd-tit">
@@ -80,12 +84,9 @@
                     <!-- <div class="pd-made-in"> -->
                         <?php// echo 'Xuất xứ: '. $made_in ?>
                     <!-- </div> -->
-             	   <?php	//} ?>
-                    <div class="pd-btn">
-                        <a class="order seopressbtn" style="cursor: pointer;" data-toggle="modal" data-target="#myModal">
-                        	Mua hàng
-                        </a>
-                    </div>
+                    <?php //} 
+                    get_template_part( 'template-parts/order', 'call' );
+                    ?>
                     <div class="pd-text"> <?php echo get_post_meta($post->ID, "wpcf-tom-tat-san-pham", true) ?> </div>
                 </div>
        		</li>
@@ -101,29 +102,3 @@
     $wp_query = null;
     $wp_query = $temp;  // Reset
 ?>
-
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Liên hệ đặt hàng</h4>
-      </div>
-      <div class="modal-body">
-          <span>Vui lòng gọi </span>
-          <a href="tel:0901463986">0901463986</a>
-          <span> hoặc </span>
-          <a href="tel:0948855439">0948855439</a>
-        <!-- <p>Hotline 0901463986 - 0948855439</p> -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-      </div>
-    </div>
-
-  </div>
-</div>

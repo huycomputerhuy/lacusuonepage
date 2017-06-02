@@ -1,7 +1,7 @@
 /* ------The Style sheet for child theme ----*/
 
 /*Reset CSS*/
-span,
+body span,
 h1,
 h2,
 h3,
@@ -13,44 +13,53 @@ blockquote,
 pre,
 a,
 ol,
-ul,
-li 
+ul 
  {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     list-style: none outside none;
 }
 
 
 h1 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
     font-size: 20px;
 }
 
 h2 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
     font-size: 18px;
     text-transform: inherit !important;
 }
 
 h3 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
     font-size: 16px !important;
     text-transform: inherit !important;
 }
 
 h4 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
     font-size: 14px !important;
 }
 
 h5 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
     font-size: 12px !important;
 }
 
 h6 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
     font-size: 10px !important;
 }
 
 ul.navbar-nav li a {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
 }
 
+#maincontainer p{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
 
 /* =20px */
 

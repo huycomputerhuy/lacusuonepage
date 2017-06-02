@@ -57,24 +57,21 @@ get_header(); ?>
         <?php } ?>
 
         <?php
-            // $category = get_the_category();     
-            $cat_id = get_queried_object_id();   
-         ?>
-                <div class="main_product">
-                    <div class="tabbox">
-                        <ul class="tablist">
-                            <li>
-                                <a class="seopressbtn" href='<?php echo get_category_link($category->term_id)?>'><?php echo single_cat_title() ?></a>
-                            </li>
-                        </ul>
-                    </div> <!-- End tabtitle --> 
-         <?php          
-                    get_template_part( 'template-parts/category', 'loop' );
-         ?>
-                </div>
-          <?php
+        // $category = get_the_category();     
+        $cat_id = get_queried_object_id();   
         ?>
-        
+        <div class="main_product">
+            <div class="tabbox">
+                <ul class="tablist">
+                    <li>
+                        <a class="seopressbtn" href='<?php echo get_category_link($category->term_id)?>'><?php echo single_cat_title() ?></a>
+                    </li>
+                </ul>
+            </div> <!-- End tabtitle --> 
+            <?php          
+            get_template_part( 'template-parts/category', 'loop' );
+            ?>
+        </div>
     </div>
 </div>
 <?php if( get_theme_mod( 'seopress_blog_archive_layout', 'rights' ) == 'rights' ) { get_sidebar(); } ?>
