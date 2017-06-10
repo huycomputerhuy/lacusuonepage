@@ -89,8 +89,8 @@ ul.navbar-nav li a {
 
 .tabbox ul li a {
     margin-left: 5px;
-    background: #337ab7;
-    color: #fff;
+    /*background: #337ab7;
+    color: #fff;*/
     padding: 5px 20px;
 }
 
@@ -158,7 +158,7 @@ ul.veritem li .pd-ctn .pd-btn a {
 }
 
 ul.veritem li .pd-ctn .pd-btn a.order {
-    color: #fff;
+    /*color: #fff;*/
     font-weight: normal;
     font-size: 11px;
     word-wrap: break-word;
