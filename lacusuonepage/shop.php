@@ -94,6 +94,7 @@ get_header(); ?>
                     </div> <!-- End tabtitle --> 
          <?php          
                     get_template_part( 'template-parts/category', 'loop' );
+                    get_template_part( 'template-parts/alo', 'pop' );
          ?>
                 </div>
           <?php

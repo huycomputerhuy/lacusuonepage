@@ -1,16 +1,35 @@
 <?php
 // Queue parent style followed by child/customized style
+    
+    require_once get_template_directory() . '/inc/init.php';
+
     add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles', PHP_INT_MAX);
 
     function theme_enqueue_styles() {
         wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css');
         wp_enqueue_style( 'parent-bootstrap-style', get_template_directory_uri() . '/css/bootstrap.css');
         wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/styles/child-style.css', array( 'parent-style' ) );
-        // wp_enqueue_style( 'child-style_1', get_stylesheet_directory_uri() . '/styles/tmp.css', array( 'parent-style' ) );
+        wp_enqueue_style( 'child-style-alo', get_stylesheet_directory_uri() . '/styles/alo.css', array( 'parent-style' ) );
     }
-// add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-   
-   
+
+    // if(is_admin()){
+        Kirki::add_field( 'seopress_config', array(
+            'type'        => 'editor',
+            'settings'    => 'seopress_info_footer_right',
+            'label'       => esc_attr__( 'Footer Right Content', 'seopress' ),
+            'description' => esc_attr__( 'Content of Footer Right Side', 'seopress' ),
+            'section'     => 'footer_copy_options',
+            'default'     => '<p><a href="#">Terms of Use - Privacy Policy</a></p>',
+            'priority'    => 1,
+            'transport' => 'postMessage',
+            'js_vars'   => array(
+                array(
+                    'element'  => '.cprtrgh_ctmzr',
+                    'function' => 'html',
+                ),
+            ),
+        ) );
+    // }
     //Remove "catagory" in link
     // add_filter('user_trailingslashit', 'remcat_function');
     // function remcat_function($link) {

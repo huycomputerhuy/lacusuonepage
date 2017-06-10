@@ -11,7 +11,7 @@
 			</div>
 				
 			<div class="col-md-4 alignr-spsl cprtrgh_ctmzr">
-				<?php echo wp_kses_post( get_theme_mod( 'seopress_right_footer_setting', '<p><a href="#">' . __( 'Terms of Use - Privacy Policy', 'seopress' ) . '</a></p>' ) ); ?>
+				<?php echo wp_kses_post( get_theme_mod( 'seopress_info_footer_right', '<p><a href="#">' . __( 'Terms of Use - Privacy Policy', 'seopress' ) . '</a></p>' ) ); ?>
 			</div>
 			
 		</div>
