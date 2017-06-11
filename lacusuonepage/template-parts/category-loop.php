@@ -85,7 +85,7 @@
                         <?php// echo 'Xuất xứ: '. $made_in ?>
                     <!-- </div> -->
                     <?php //} 
-                    get_template_part( 'template-parts/order', 'call' );
+                    get_template_part( 'template-parts/contact', 'order' );
                     ?>
                     <div class="pd-text"> <?php echo get_post_meta($post->ID, "wpcf-tom-tat-san-pham", true) ?> </div>
                 </div>

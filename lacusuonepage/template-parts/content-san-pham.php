@@ -48,7 +48,7 @@
 	                        <?php echo 'Xuất xứ: '. $made_in ?>
 	                    </div>
 	             	   	<?php } 
-	             	   	get_template_part( 'template-parts/order', 'call' );
+	             	   	get_template_part( 'template-parts/contact', 'order' );
 	             	   	?>
 		                <div class="pd-sum"> 
 		                 <span>Tóm tắt sản phẩm</span>

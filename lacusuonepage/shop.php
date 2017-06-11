@@ -94,7 +94,6 @@ get_header(); ?>
                     </div> <!-- End tabtitle --> 
          <?php          
                     get_template_part( 'template-parts/category', 'loop' );
-                    get_template_part( 'template-parts/alo', 'pop' );
          ?>
                 </div>
           <?php
@@ -105,7 +104,8 @@ get_header(); ?>
                 get_template_part( 'template-parts/content', 'none' );
             }
         ?>
-        
+        <?php //echo do_shortcode('[huge_it_portfolio id="1"]'); ?>
+                
     </div>
 </div>
 <?php if( get_theme_mod( 'seopress_blog_archive_layout', 'rights' ) == 'rights' ) { get_sidebar(); } ?>

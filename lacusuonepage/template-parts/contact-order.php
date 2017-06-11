@@ -14,10 +14,11 @@
         <h4 class="modal-title">Liên hệ đặt hàng</h4>
       </div>
       <div class="modal-body">
-	      <span>Vui lòng gọi </span>
+        <?php echo get_theme_mod("lacusu_order_contact", '<span>Vui lòng gọi </span><a href="tel:0901463986">0901463986</a><span> hoặc </span><a href="tel:0948855439">0948855439</a>')?>
+	      <!-- <span>Vui lòng gọi </span>
 	      <a href="tel:0901463986">0901463986</a>
 	      <span> hoặc </span>
-	      <a href="tel:0948855439">0948855439</a>
+	      <a href="tel:0948855439">0948855439</a> -->
         <!-- <p>Hotline 0901463986 - 0948855439</p> -->
       </div>
       <div class="modal-footer">

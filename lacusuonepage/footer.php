@@ -17,6 +17,8 @@ else
 }
 ?>
 
+<?php get_template_part( 'template-parts/footer', 'customers' ); ?>
+
 <?php get_template_part( 'template-parts/footer', 'copyright' ); ?>
 
 <?php get_template_part( 'template-parts/footer', 'backtotop' ); ?>
