@@ -48,9 +48,11 @@
                 	<span class="pd-promotion"><?php echo '-'. $discount . '%'?></span>
                     <?php } ?>
                     <a href="<?php the_permalink(); ?>">
-                        <?php 
-                        the_post_thumbnail( array('class' => 'product-thumb') ); 
+                        <?php
+                        $image_ids = get_image_ids($post->ID, 'wpcf-hinh-anh-san-pham');
+                        $image_meta = get_attachment_meta($image_ids[0]);
                         ?>
+                        <img src="<?php echo $image_meta['src']; ?>" class="zoom_image" alt="<?php echo $image_meta['alt']; ?>" title="<?php echo $image_meta['title']; ?>">
                     </a>
                 </div>
                 <div class="pd-ctn">

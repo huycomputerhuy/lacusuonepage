@@ -11,10 +11,14 @@
 				<div class="pd_detail_top">
 					<div class="img_detail left col-xs-12 col-sm-5 col-md-4 col-lg-4">
 						<div class="img_detail_big">
+							<?php if($sale_price_info['discount']){ ?>
+							<span class="pd-promotion"><?php echo '-'. get_post_meta( $post->ID, 'wpcf-giam-gia', true ) . '%'?></span>
+						    <?php } ?>
 							<?php 
-							$images = get_post_meta($post->ID, "wpcf-hinh-anh-san-pham");
+							$image_ids = get_image_ids($post->ID, 'wpcf-hinh-anh-san-pham');
+							$image_meta = get_attachment_meta($image_ids[0]);
 							?>
-							<img src="<?php echo $images[0]?>" class="zoom_image" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+							<img src="<?php echo $image_meta['src']; ?>" class="zoom_image" alt="<?php echo $image_meta['alt']; ?>" title="<?php echo $image_meta['title']; ?>">
 						</div>
 					</div>
 					<div class="info_detail right col-xs-12  col-sm-7 col-md-8 col-lg-8">
@@ -38,7 +42,7 @@
 	                        <span class="price-discount" ><?php echo $sale_price_info['price']  ?></span>
 	                        <?php } ?>
 
-	                        <span class="price-sale" ><?php echo $sale_price_info['sale_price'] ?></span>
+	                        <span class="price-sale" ><?php echo  $sale_price_info['sale_price'] ?></span>
 	                    </div>
 	                    <?php 
 	                    $made_in = get_post_meta( $post->ID, 'wpcf-xuat-xu', true );

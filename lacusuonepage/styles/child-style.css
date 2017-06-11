@@ -142,11 +142,11 @@ ul.veritem li .pd-img {
     position: relative
 }
 
-ul.veritem li .pd-img img {
+/*ul.veritem li .pd-img img {
     max-width: 200px;
     max-height: 220px;
 }
-
+*/
 ul.veritem li .pd-ctn .pd-btn {
     margin: 8px 0;
 }
@@ -252,7 +252,8 @@ ul.veritem li .pd-img {
 }
 
 ul.veritem li .pd-img img {
-    max-width: 145px;
+    max-width: 150px;
+    max-height: 150px;
 }
 
 ul.veritem li .pd-ctn h2.pd-tit {
@@ -300,16 +301,20 @@ span.pd-promotion {
     font-size: 12px;
     font-weight: bold;
     height: 55px;
-    right: 5px;
+    right: 0px;
     top: 0px;
-    line-height: 40px;
+    line-height: 35px;
     position: absolute;
     width: 70px;
     z-index: 3;
     background: url(../images/pro_promotion.png) transparent;
     text-align: center;
-    padding-left: 25px;
-    font-weight: bold;
+    padding-left: 30px;
+    /*padding-top: 0px;*/
+    font-weight: bold
+}
+.img_detail_big span.pd-promotion{
+    right: 15px;
 }
 
 

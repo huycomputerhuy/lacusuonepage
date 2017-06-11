@@ -53,6 +53,37 @@
         return cal_pro_price($price, $discount);
     }
 
+
+    function get_image_ids($post_id, $field_name) {
+     
+        $images = (array) get_post_meta($post_id, $field_name, false); // cast to array in case there is only one item
+        $ids = array();
+
+        global $wpdb;
+
+        foreach($images as $img) {
+        $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$img'";
+        $id = $wpdb->get_var($query);
+        $ids[] = $id;
+        }
+
+        // return implode(",",$ids);
+        return $ids;
+    }
+
+    function get_attachment_meta( $attachment_id ) {
+
+        $attachment = get_post( $attachment_id );
+        return array(
+            'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+            'caption' => $attachment->post_excerpt,
+            'description' => $attachment->post_content,
+            'href' => get_permalink( $attachment->ID ),
+            'src' => $attachment->guid,
+            'title' => $attachment->post_title
+        );
+    }
+
     // lacusu Breadcrumb.
     function lacusu_breadcrumbs()
     {

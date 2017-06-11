@@ -1,16 +1,13 @@
 <?php
     //Theme option definition
     //set logo in customizer header
-    // if ( ! function_exists( 'seopress_configuration_sample_styling' ) )
-    // {
-        function lacusu_configuration_sample_styling( $config )
-        {
-            return wp_parse_args( array(
-                'logo_image'   => get_stylesheet_directory_uri() . '/images/lacusu_logo_theme_options.png',
-                'description'  => __( 'A child theme of <a target="_blank" href="http://ewptheme.com/">SEOPress</a>.', 'seopress' ),
-            ), $config );
-        }
-    // }
+    function lacusu_configuration_sample_styling( $config )
+    {
+        return wp_parse_args( array(
+            'logo_image'   => get_stylesheet_directory_uri() . '/images/lacusu_logo_theme_options.png',
+            'description'  => __( 'A child theme of <a target="_blank" href="http://ewptheme.com/">SEOPress</a>.', 'seopress' ),
+        ), $config );
+    }
     add_filter( 'kirki/config', 'lacusu_configuration_sample_styling' );
 
     //the main panel
