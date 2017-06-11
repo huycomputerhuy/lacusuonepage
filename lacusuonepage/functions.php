@@ -33,14 +33,26 @@
         }
     }
 
-    function cal_pro_price($price, $discountPer){
+    function cal_pro_price($price, $discount_percent, $discount_vnd){
         $sale_price = convert_price($price);
+        $discount_vnd = convert_price($discount_vnd);
         $sale_price_info['discount'] = false;
-        if($discountPer){
+        if(!empty($discount_vnd)){
             $sale_price_info['discount'] = true;
             $sale_price_info['price'] =  convert2VND($sale_price);
-            $sale_price = $sale_price - $sale_price * ($discountPer/100);
-            $sale_price_info['discount_num'] =  $discountPer;
+
+            $sale_price = $sale_price - $discount_vnd;
+
+            $discount_num = round(($discount_vnd * 100) / $sale_price, 2);
+
+            $sale_price_info['discount_num'] =  $discount_num;
+        }else{
+            if(!empty($discount_percent)){
+                $sale_price_info['discount'] = true;
+                $sale_price_info['price'] =  convert2VND($sale_price);
+                $sale_price = $sale_price - $sale_price * ($discount_percent/100);
+                $sale_price_info['discount_num'] =  round($discount_percent, 2);
+            }
         }
         $sale_price_info['sale_price'] =  convert2VND($sale_price);
 
@@ -49,8 +61,9 @@
 
     function get_sale_price ($pro_id) {
         $price =  get_post_meta( $pro_id, 'wpcf-don-gia', true );
-        $discount = get_post_meta( $pro_id, 'wpcf-giam-gia', true );
-        return cal_pro_price($price, $discount);
+        $discount_percent = get_post_meta( $pro_id, 'wpcf-giam-gia', true );
+        $discount_vnd = get_post_meta( $pro_id, 'wpcf-giam-gia-vnd', true );
+        return cal_pro_price($price, $discount_percent, $discount_vnd);
     }
 
 
@@ -87,7 +100,7 @@
     // lacusu Breadcrumb.
     function lacusu_breadcrumbs()
     {
-        $custom_taxonomy = '';
+        $custom_taxonomy = 'product_type';
 
         // Get the query & post information
         global $post,$wp_query;
@@ -190,7 +203,7 @@
                 $taxonomy_exists = taxonomy_exists( $custom_taxonomy );
                 if( empty( $last_category ) && !empty( $custom_taxonomy ) && $taxonomy_exists )
                 {
-                       
+
                     $taxonomy_terms = get_the_terms( $post->ID, $custom_taxonomy );
                     $cat_id         = $taxonomy_terms[0]->term_id;
                     $cat_nicename   = $taxonomy_terms[0]->slug;
@@ -209,6 +222,7 @@
                       
                 // Else if post is in a custom taxonomy
                 }
+
                 elseif( !empty( $cat_id ) )
                 {
                       

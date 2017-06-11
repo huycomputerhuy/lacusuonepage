@@ -1,19 +1,30 @@
 <?php
 	$product_class_name = "product container-fluid"; 	
-	global $category;
-    $pro_per_catogory = 8;
-    if(empty($category)){
-        global $cat_id;
-        $pro_per_catogory = 0;        
+    $pro_per_catogory = 3;
+    if(!is_page_template("shop.php")){
+        global $term_id;        
         $args = array( 
             'post_type' => 'san-pham',
-            'cat' => $cat_id
+            'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'product_type',
+                    'field'    => 'term_id',
+                    'terms'    => $term_id
+            )),
         );
     }else{
-        $cat_id = $category->term_id;
+	   global $product_type;
+        $term_id = $product_type->term_id;
         $args = array( 
             'post_type' => 'san-pham',
-            'cat' => $cat_id,
+            'posts_per_page' => $pro_per_catogory,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'product_type',
+                    'field'    => 'term_id',
+                    'terms'    => $term_id
+            )),
             'meta_query' => array(
                 array(
                     'key' => 'wpcf-hien-thi-trang-chu',
@@ -26,26 +37,24 @@
     $temp = $wp_query;
     $wp_query = null;
     $wp_query = new WP_Query($args);
-    $count = 0;
+    $has_post = false;
 ?>
 
-    <ul class='veritem clearfix' id="cat-<?php echo $cat_id ?>" >
+    <ul class='veritem clearfix' id="term-id-<?php echo $term_id ?>" >
 <?php
     	
 	    while ($wp_query->have_posts()) : 
 	    	$wp_query->the_post(); 
-	        if($pro_per_catogory != 0 && $count == $pro_per_catogory){
-	            break;
-	    	}
-	    	$count++;
+	    	$has_post = true;
 	    	$price =  get_post_meta( $post->ID, 'wpcf-don-gia', true );
-	    	$discount = get_post_meta( $post->ID, 'wpcf-giam-gia', true );
-	    	$sale_price_info = cal_pro_price($price, $discount);
+            $discount_vnd = get_post_meta( $post->ID, 'wpcf-giam-gia-vnd', true );
+            $discount_percent = get_post_meta( $post->ID, 'wpcf-giam-gia', true );
+	    	$sale_price_info = cal_pro_price($price, $discount_percent, $discount_vnd);
 ?>		
         	<li>
                 <div class="pd-img">
                 	<?php if($sale_price_info['discount']){ ?>
-                	<span class="pd-promotion"><?php echo '-'. $discount . '%'?></span>
+                	<span class="pd-promotion"><?php echo '-'. $sale_price_info[discount_num] . '%'?></span>
                     <?php } ?>
                     <a href="<?php the_permalink(); ?>">
                         <?php
@@ -93,7 +102,7 @@
                 </div>
        		</li>
 		<?php endwhile; 
-        if($count == 0){
+        if(!$has_post){
         ?>
             <div class="pd-text">
                 <span><?php echo 'Sản phẩm đang được cập nhật...' ?></span>

@@ -58,7 +58,7 @@ get_header(); ?>
 
         <?php
         // $category = get_the_category();     
-        $cat_id = get_queried_object_id();   
+        $term_id = get_queried_object_id();  
         ?>
         <div class="main_product">
             <div class="tabbox">
@@ -69,7 +69,7 @@ get_header(); ?>
                 </ul>
             </div> <!-- End tabtitle --> 
             <?php          
-            get_template_part( 'template-parts/category', 'loop' );
+            get_template_part( 'template-parts/product_type', 'loop' );
             ?>
         </div>
     </div>

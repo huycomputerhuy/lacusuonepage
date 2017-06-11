@@ -12,13 +12,15 @@
 					<div class="img_detail left col-xs-12 col-sm-5 col-md-4 col-lg-4">
 						<div class="img_detail_big">
 							<?php if($sale_price_info['discount']){ ?>
-							<span class="pd-promotion"><?php echo '-'. get_post_meta( $post->ID, 'wpcf-giam-gia', true ) . '%'?></span>
+							<span class="pd-promotion"><?php echo '-'. $sale_price_info[discount_num] . '%'?></span>
 						    <?php } ?>
 							<?php 
 							$image_ids = get_image_ids($post->ID, 'wpcf-hinh-anh-san-pham');
 							$image_meta = get_attachment_meta($image_ids[0]);
+							$alt = $image_meta['alt'];
+							$title = $image_meta['title'];
 							?>
-							<img src="<?php echo $image_meta['src']; ?>" class="zoom_image" alt="<?php echo $image_meta['alt']; ?>" title="<?php echo $image_meta['title']; ?>">
+							<img src="<?php echo $image_meta['src']; ?>" class="zoom_image" alt="<?php if($alt){ echo $alt;}else{the_title();} ?>" title="<?php if($title){ echo $title;}else{the_title();} ?>">
 						</div>
 					</div>
 					<div class="info_detail right col-xs-12  col-sm-7 col-md-8 col-lg-8">

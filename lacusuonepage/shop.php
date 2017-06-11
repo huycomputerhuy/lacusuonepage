@@ -77,23 +77,23 @@ get_header(); ?>
 
         <?php
         
-            $categories = get_categories(array(
+            $product_types = get_terms('product_type', array(
                 'parent' => 0,
                 'hide_empty' => 1
             ));
-            if($categories){
-                foreach ($categories as $category) {
+            if($product_types){
+                foreach ($product_types as $product_type) {
          ?>
                 <div class="main_product">
                     <div class="tabbox">
                         <ul class="tablist">
                             <li>
-                                <a class="seopressbtn" href='<?php echo get_category_link($category->term_id)?>'><?php echo $category->name ?></a>
+                                <a class="seopressbtn" href='<?php echo get_category_link($product_type->term_id)?>'><?php echo $product_type->name ?></a>
                             </li>
                         </ul>
                     </div> <!-- End tabtitle --> 
          <?php          
-                    get_template_part( 'template-parts/category', 'loop' );
+                    get_template_part( 'template-parts/product_type', 'loop' );
          ?>
                 </div>
           <?php
