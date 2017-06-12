@@ -1,6 +1,6 @@
 <?php
 	$product_class_name = "product container-fluid"; 	
-    $pro_per_catogory = 3;
+    $pro_per_catogory = 8;
     if(!is_page_template("shop.php")){
         global $term_id;        
         $args = array( 

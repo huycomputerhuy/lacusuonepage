@@ -104,7 +104,8 @@ get_header(); ?>
                 get_template_part( 'template-parts/content', 'none' );
             }
         ?>
-        <?php //echo do_shortcode('[huge_it_portfolio id="1"]'); ?>
+        
+        <?php get_template_part( 'template-parts/contact', 'alo' ); ?>
                 
     </div>
 </div>

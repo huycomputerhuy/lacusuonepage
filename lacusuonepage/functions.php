@@ -2,7 +2,7 @@
 // Queue parent style followed by child/customized style
     
     require_once (get_template_directory() . '/inc/init.php');
-    require_once( '/inc/core/lacusu-options.php');
+    // require_once( '/inc/core/lacusu-options.php');
 
     add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles', PHP_INT_MAX);
 
