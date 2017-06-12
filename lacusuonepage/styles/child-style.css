@@ -460,5 +460,10 @@ span.pd-promotion {
 
 .pd_detail_top .info_detail .pd-made-in {
     margin: 10px 0;
-    font-weight: bold
+    /*font-weight: bold*/
+}
+
+.pd_detail_top .info_detail .pd-warranty {
+    margin: 10px 0;
+    /*font-weight: bold*/
 }

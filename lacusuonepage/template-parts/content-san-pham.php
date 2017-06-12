@@ -46,6 +46,14 @@
 
 	                        <span class="price-sale" ><?php echo  $sale_price_info['sale_price'] ?></span>
 	                    </div>
+	             	   	<?php
+	                    $warranty = get_post_meta( $post->ID, 'wpcf-bao-hanh', true );
+	                    if($warranty){
+	               		?>
+	                    <div class="pd-warranty">
+	                        <?php echo 'Bảo hành: '. $warranty ?>
+	                    </div>
+	             	   	<?php } ?>
 	                    <?php 
 	                    $made_in = get_post_meta( $post->ID, 'wpcf-xuat-xu', true );
 	                    if($made_in){
@@ -53,7 +61,8 @@
 	                    <div class="pd-made-in">
 	                        <?php echo 'Xuất xứ: '. $made_in ?>
 	                    </div>
-	             	   	<?php } 
+	             	   	<?php } ?> 
+	             	   	<?php
 	             	   	get_template_part( 'template-parts/contact', 'order' );
 	             	   	?>
 		                <div class="pd-sum"> 
