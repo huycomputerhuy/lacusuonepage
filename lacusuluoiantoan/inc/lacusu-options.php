@@ -112,7 +112,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'seopress_default_a_mover_color',
-        'label'       => esc_attr__( 'Default Color of of Mouse Over Links', 'seopress' ),
+        'label'       => esc_attr__( 'Default Color of Mouse Over Links', 'seopress' ),
         'section'     => 'lacusu_color_link',
         'default'     => '#23527c',
         'choices'     => array(
@@ -168,7 +168,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_top_header',
-        'label'       => esc_attr__( 'Color of of Top Hearder', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Top Hearder', 'seopress' ),
         'section'     => 'lacusu_color_top_header_sec',
         'default'     => '#337ab7',
         'choices'     => array(
@@ -187,7 +187,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_top_header_text',
-        'label'       => esc_attr__( 'Color of of Top Hearder Text', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Top Hearder Text', 'seopress' ),
         'section'     => 'lacusu_color_top_header_sec',
         'default'     => '#ffffff',
         'choices'     => array(
@@ -238,7 +238,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'seopress_info_pro_clr',
-        'label'       => esc_attr__( 'Color of of Hearder', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Hearder', 'seopress' ),
         'section'     => 'lacusu_color_header_sec',
         'default'     => '#ffffff',
         'choices'     => array(
@@ -257,7 +257,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'seopress_info_pro_clr_text',
-        'label'       => esc_attr__( 'Color of of Hearder Text', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Hearder Text', 'seopress' ),
         'section'     => 'lacusu_color_header_sec',
         'default'     => '#000000',
         'choices'     => array(
@@ -276,7 +276,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_site_name_text',
-        'label'       => esc_attr__( 'Color of of Site Title', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Site Title', 'seopress' ),
         'section'     => 'lacusu_color_header_sec',
         'default'     => '#000000',
         'choices'     => array(
@@ -295,7 +295,7 @@
      Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_tagline_text',
-        'label'       => esc_attr__( 'Color of of Tagline', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Tagline', 'seopress' ),
         'section'     => 'lacusu_color_header_sec',
         'default'     => '#000000',
         'choices'     => array(
@@ -363,7 +363,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_navbar',
-        'label'       => esc_attr__( 'Color of of Navigation Bar', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Navigation Bar', 'seopress' ),
         'section'     => 'lacusu_color_navbar_sec',
         'default'     => '#337ab7',
         'choices'     => array(
@@ -382,7 +382,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_navbar_hover',
-        'label'       => esc_attr__( 'Color of of Hovering Navigation Bar', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Hovering Navigation Bar', 'seopress' ),
         'section'     => 'lacusu_color_navbar_sec',
         'default'     => '#e7e7e7',
         'choices'     => array(
@@ -402,7 +402,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_navbar_text',
-        'label'       => esc_attr__( 'Color of of Navigation Bar Text', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Navigation Bar Text', 'seopress' ),
         'section'     => 'lacusu_color_navbar_sec',
         'default'     => '#ffffff',
         'choices'     => array(
@@ -452,7 +452,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_footer_copyright',
-        'label'       => esc_attr__( 'Color of of Footer', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Footer', 'seopress' ),
         'section'     => 'lacusu_color_footer_sec',
         'default'     => '#060606',
         'choices'     => array(
@@ -471,7 +471,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_footer_copyright_text',
-        'label'       => esc_attr__( 'Color of of Footer Text', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Footer Text', 'seopress' ),
         'section'     => 'lacusu_color_footer_sec',
         'default'     => '#a7a7a7',
         'choices'     => array(
@@ -520,7 +520,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_button',
-        'label'       => esc_attr__( 'Color of of button', 'seopress' ),
+        'label'       => esc_attr__( 'Color of button', 'seopress' ),
         'section'     => 'lacusu_color_button_sec',
         'default'     => '#337ab7',
         'choices'     => array(
@@ -539,7 +539,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_button_hover',
-        'label'       => esc_attr__( 'Color of of Hovering button', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Hovering button', 'seopress' ),
         'section'     => 'lacusu_color_button_sec',
         'default'     => '#286090',
         'choices'     => array(
@@ -558,7 +558,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_button_text',
-        'label'       => esc_attr__( 'Color of of Button Text', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Button Text', 'seopress' ),
         'section'     => 'lacusu_color_button_sec',
         'default'     => '#ffffff',
         'choices'     => array(
@@ -606,7 +606,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_widget_title',
-        'label'       => esc_attr__( 'Color of of  Widget Title', 'seopress' ),
+        'label'       => esc_attr__( 'Color of  Widget Title', 'seopress' ),
         'section'     => 'lacusu_color_widget_title_sec',
         'default'     => '#337ab7',
         'choices'     => array(
@@ -625,7 +625,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_widget_title_text',
-        'label'       => esc_attr__( 'Color of of Widget Title Text', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Widget Title Text', 'seopress' ),
         'section'     => 'lacusu_color_widget_title_sec',
         'default'     => '#ffffff',
         'choices'     => array(
@@ -644,7 +644,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'number',
         'settings'    => 'lacusu_color_widget_title_text_size',
-        'label'       => esc_attr__( 'Color of of Widget Title Text Size (px)', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Widget Title Text Size (px)', 'seopress' ),
         'section'     => 'lacusu_color_widget_title_sec',
         'default'     => '16',
         'choices'     => array(
@@ -673,7 +673,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_site_menu_button',
-        'label'       => esc_attr__( 'Color of of button', 'seopress' ),
+        'label'       => esc_attr__( 'Color of button', 'seopress' ),
         'section'     => 'lacusu_color_site_menu_button_sec',
         'default'     => '#337ab7',
         'choices'     => array(
@@ -692,7 +692,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_site_menu_button_hover',
-        'label'       => esc_attr__( 'Color of of Hovering button', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Hovering button', 'seopress' ),
         'section'     => 'lacusu_color_site_menu_button_sec',
         'default'     => '#286090',
         'choices'     => array(
@@ -721,7 +721,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_back_top_button',
-        'label'       => esc_attr__( 'Color of of button', 'seopress' ),
+        'label'       => esc_attr__( 'Color of button', 'seopress' ),
         'section'     => 'lacusu_color_back_top_button_sec',
         'default'     => '#337ab7',
         'choices'     => array(
@@ -741,7 +741,7 @@
     Kirki::add_field( 'seopress_config', array(
         'type'        => 'color',
         'settings'    => 'lacusu_color_back_top_button_hover',
-        'label'       => esc_attr__( 'Color of of Hovering button', 'seopress' ),
+        'label'       => esc_attr__( 'Color of Hovering button', 'seopress' ),
         'section'     => 'lacusu_color_back_top_button_sec',
         'default'     => '#286090',
         'choices'     => array(
@@ -770,7 +770,7 @@
     // Kirki::add_field( 'seopress_config', array(
     //     'type'        => 'color',
     //     'settings'    => 'lacusu_color_alo_icon_button_hover',
-    //     'label'       => esc_attr__( 'Color of of Hovering button', 'seopress' ),
+    //     'label'       => esc_attr__( 'Color of Hovering button', 'seopress' ),
     //     'section'     => 'lacusu_color_alo_icon_sec',
     //     'default'     => 'rgba(0, 175, 242, 0.5)',
     //     'choices'     => array(
@@ -797,7 +797,7 @@
     // Kirki::add_field( 'seopress_config', array(
     //     'type'        => 'color',
     //     'settings'    => 'lacusu_color_alo_icon_button',
-    //     'label'       => esc_attr__( 'Color of of button', 'seopress' ),
+    //     'label'       => esc_attr__( 'Color of button', 'seopress' ),
     //     'section'     => 'lacusu_color_alo_icon_sec',
     //     'default'     => 'rgba(117, 235, 80, 0.5)',
     //     'choices'     => array(
