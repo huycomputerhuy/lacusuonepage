@@ -105,8 +105,6 @@ get_header(); ?>
             }
         ?>
         
-        <?php get_template_part( 'template-parts/contact', 'alo' ); ?>
-                
     </div>
 </div>
 <?php if( get_theme_mod( 'seopress_blog_archive_layout', 'rights' ) == 'rights' ) { get_sidebar(); } ?>

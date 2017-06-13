@@ -1075,10 +1075,16 @@
         content: "* "
     }
     
+    @media (min-width: 767px) {
+        a.quick-alo-phone-call {
+            visibility: hidden !important;
+        }
+    }
+    
     @media (max-width: 767px) {
-        /*   .quick-alo-phone.quick-alo-show {
-        visibility:hidden !important
-    }*/
+        a.quick-alo-facebook {
+            visibility: hidden !important
+        }
         .quick-alo-phone {
             width: 125px;
             height: 125px;

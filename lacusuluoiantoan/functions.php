@@ -1,8 +1,9 @@
 <?php
 // Queue parent style followed by child/customized style
     
-    require_once (get_template_directory() . '/inc/init.php');
     // require_once( '/inc/core/lacusu-options.php');
+    require_once (get_template_directory() . '/inc/init.php');
+    get_template_part( 'inc/lacusu', 'options' );
 
     add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles', PHP_INT_MAX);
 
@@ -23,9 +24,7 @@
         };
 
     function convert_price($price){
-        // TODO: need to improve
-        $price = str_replace('.', '', $price);  
-        $price = str_replace(',', '', $price);  
+        $price = str_replace(array('.', ','), '', $price);  
         if (is_numeric($price)) {
            return $price;
         }else{
