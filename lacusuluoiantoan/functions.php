@@ -112,7 +112,7 @@
             echo '<ul class="breadcrumb small">';
                
             // Home page
-            echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . __( 'Home', 'seopress' ) . '</a></li>';
+            echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . __( 'Trang chủ', 'seopress' ) . '</a></li>';
                
            if ( is_home() )
            {
@@ -241,7 +241,7 @@
             {
                    
                 // Category page
-                echo '<li class="active">' . __( 'Category: ', 'seopress' ) . single_cat_title( '', false ) . '</li>';
+                echo '<li class="active">' /*. __( 'Category: ', 'seopress' )*/ . single_cat_title( '', false ) . '</li>';
                    
             }
             elseif ( is_page() )

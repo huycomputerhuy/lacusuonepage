@@ -142,11 +142,13 @@ ul.veritem li .pd-img {
     position: relative
 }
 
+
 /*ul.veritem li .pd-img img {
     max-width: 200px;
     max-height: 220px;
 }
 */
+
 ul.veritem li .pd-ctn .pd-btn {
     margin: 8px 0;
 }
@@ -313,7 +315,8 @@ span.pd-promotion {
     /*padding-top: 0px;*/
     font-weight: bold
 }
-.img_detail_big span.pd-promotion{
+
+.img_detail_big span.pd-promotion {
     right: 15px;
 }
 
@@ -371,15 +374,17 @@ span.pd-promotion {
         margin-top: 5px;
     }
     ul.veritem li .pd-img {
-        width: 100%;
         height: auto !important;
         float: left;
         margin-right: 10px;
-        display: block;
-        float: none;
+        min-height: 50px;
+        display: inline-block;
+        width: 120px;
+        min-height: 140px;
     }
     ul.veritem li .pd-img img {
         max-width: 100%;
+        width: 100%;
     }
     ul.veritem li .pd-ctn .pd-btn {
         position: static;
@@ -388,19 +393,6 @@ span.pd-promotion {
         width: 100%;
         height: auto;
         text-align: left
-    }
-    ul.veritem li .pd-img {
-        min-height: 50px;
-        float: left;
-        display: inline-block;
-        width: 120px;
-        min-height: 140px;
-    }
-    ul.veritem li .pd-img img {
-        width: 100%;
-    }
-    ul.veritem li .pd-ctn {
-        float: none;
     }
     ul.veritem li .pd-ctn .pd-btn a {
         padding: 5px 5px;
@@ -466,4 +458,72 @@ span.pd-promotion {
 .pd_detail_top .info_detail .pd-warranty {
     margin: 10px 0;
     /*font-weight: bold*/
+}
+
+
+/*style for normal post*/
+
+.lacusu-normal-post {
+    list-style: none outside none;
+    clear: none;
+    overflow: inherit;
+    /*border-bottom: 1px solid #cacaca;*/
+    padding: 0px 10px 9px 0px;
+    margin-bottom: 10px;
+    height: 230px;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.lacusu-ct-left {
+    /*overflow: hidden;*/
+}
+
+.lacusu-ct-left a.img img,
+.lacusu-ct-img {
+    float: left;
+    height: 150px;
+    margin-right: 10px;
+    width: 180px;
+}
+
+.lacusu-ct-the-title {
+    margin-top: 0px;
+}
+
+.lacusu-ct-right {
+    height: 160px;
+}
+
+@media (max-width: 767px) {
+    .lacusu-normal-post {
+        width: 100%;
+        height: auto;
+        text-align: left;
+    }
+    .lacusu-ct-right {
+        display: block !important;
+        width: 100% !important;
+        float: left;
+        height: auto;
+    }
+    .lacusu-ct-the-title {
+        width: 100% !important;
+        margin-top: 5px;
+    }
+    .lacusu-ct-left {
+        height: auto !important;
+        float: none;
+        margin-right: 10px;
+        min-height: 50px;
+        /*display: inline-block;*/
+        width: auto;
+        /*min-height: 140px;*/
+    }
+    .lacusu-ct-img {
+        height:auto;
+        margin-right: 10px;
+        width: auto;
+    }
 }
