@@ -11,7 +11,7 @@
         wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css');
         wp_enqueue_style( 'parent-bootstrap-style', get_template_directory_uri() . '/css/bootstrap.css');
         wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/styles/child-style.css', array( 'parent-style' ) );
-        wp_enqueue_style( 'child-style-alo', get_stylesheet_directory_uri() . '/styles/alo.css', array( 'parent-style' ) );
+        wp_enqueue_style( 'child-style-alo', get_stylesheet_directory_uri() . '/styles/alo.css');
     }
 
     function convert2VND($priceFloat) {

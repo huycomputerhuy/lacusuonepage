@@ -780,16 +780,34 @@
         'output' => array(
             array(
                 'element'  => '.quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-img-circle, .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-img-circle',
-                'property' => 'background-color'
+                'property' => 'background-color',
+                "suffix" => "!important"
             ),
             array(
-                'element'  => '.quick-alo-phone.quick-alo-hover .quick-alo-ph-circle, .quick-alo-phone:hover .quick-alo-ph-circle',
-                'property' => 'background-color'
+                'element'  => '.quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-circle, .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle',
+                'property' => 'border-color',
+                "suffix" => "!important"
             ),
             array(
-                'element'  => '.quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle',
-                'property' => 'border-color'
+                'element'  => '.quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-circle-fill, .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle-fill',
+                'property' => 'border-color', 
+                "suffix" => "!important"
             ),
+            array(
+                'element'  => '.quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-circle-fill, .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle-fill',
+                'property' => 'background-color', 
+                "suffix" => "!important"
+            )
+            // array(
+            //     'element'  => '#quick-alo-wrapper .quick-alo-popup .quick-alo-submit:hover',
+            //     'property' => 'border-color', 
+            //     "suffix" => "!important"
+            // ),
+            // array(
+            //     'element'  => '.quick-alo-phone.quick-alo-hover .quick-alo-ph-circle, .quick-alo-phone:hover .quick-alo-ph-circle',
+            //     'property' => 'border-color', 
+            //     "suffix" => "!important"
+            // ),
         ),
         'transport' => 'auto',
     ) );
@@ -807,15 +825,18 @@
         'output' => array(
             array(
                 'element'  => '.quick-alo-phone.quick-alo-green .quick-alo-ph-img-circle',
-                'property' => 'background-color'
+                'property' => 'background-color',
+                "suffix" => "!important"
             ),
             array(
                 'element'  => '.quick-alo-phone.quick-alo-green .quick-alo-ph-circle',
-                'property' => 'border-color'
+                'property' => 'border-color',
+                "suffix" => "!important"
             ),
             array(
                 'element'  => '.quick-alo-phone.quick-alo-green .quick-alo-ph-circle-fill',
-                'property' => 'background-color'
+                'property' => 'background-color',
+                "suffix" => "!important"
             )
         ),
         'transport' => 'auto',
