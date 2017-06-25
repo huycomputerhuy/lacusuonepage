@@ -759,71 +759,63 @@
     ) );
     //End Color of backto top button
     //Color of Alo icon button
-    // Kirki::add_section( 'lacusu_color_alo_icon_sec', array(
-    //     'title'          => esc_attr__( 'Font - Color of Alo Icon', 'seopress' ),
-    //     'panel'          => 'lacusu_options', // Not typically needed.
-    //     'priority'       => 1,
-    //     'capability'     => 'edit_theme_options',
-    //     'theme_supports' => '', // Rarely needed.
-    // ) );
+    Kirki::add_section( 'lacusu_color_alo_icon_sec', array(
+        'title'          => esc_attr__( 'Font - Color of Alo Icon', 'seopress' ),
+        'panel'          => 'lacusu_options', // Not typically needed.
+        'priority'       => 1,
+        'capability'     => 'edit_theme_options',
+        'theme_supports' => '', // Rarely needed.
+    ) );
 
-    // Kirki::add_field( 'seopress_config', array(
-    //     'type'        => 'color',
-    //     'settings'    => 'lacusu_color_alo_icon_button_hover',
-    //     'label'       => esc_attr__( 'Color of Hovering button', 'seopress' ),
-    //     'section'     => 'lacusu_color_alo_icon_sec',
-    //     'default'     => 'rgba(0, 175, 242, 0.5)',
-    //     'choices'     => array(
-    //         'alpha' => true,
-    //     ),
-    //     'priority'    => 10,
-    //     'output' => array(
-    //         array(
-    //             'element'  => '.quick-alo-ph-circle, .quick-alo-ph-circle-fill, .quick-alo-ph-img-circle',
-    //             'property' => 'background-color'
-    //         ),
-    //         array(
-    //             'element'  => '.quick-alo-phone.quick-alo-green .quick-alo-ph-img-circle',
-    //             'property' => 'background-color'
-    //         ),
-    //         array(
-    //             'element'  => '.quick-alo-phone.quick-alo-hover .quick-alo-ph-circle-fill,.quick-alo-phone:hover .quick-alo-ph-circle-fill',
-    //             'property' => 'background-color'
-    //         )
-    //     ),
-    //     'transport' => 'auto',
-    // ) );
+    Kirki::add_field( 'seopress_config', array(
+        'type'        => 'color',
+        'settings'    => 'lacusu_color_alo_icon_button_hover',
+        'label'       => esc_attr__( 'Color of Hovering button', 'seopress' ),
+        'section'     => 'lacusu_color_alo_icon_sec',
+        'default'     => '#75eb50',
+        'choices'     => array(
+            'alpha' => true,
+        ),
+        'priority'    => 10,
+        'output' => array(
+            array(
+                'element'  => '.quick-alo-phone.quick-alo-hover .quick-alo-ph-circle-fill, .quick-alo-phone:hover .quick-alo-ph-circle-fill',
+                'property' => 'background-color'
+            )
+        ),
+        'transport' => 'auto',
+    ) );
 
-    // Kirki::add_field( 'seopress_config', array(
-    //     'type'        => 'color',
-    //     'settings'    => 'lacusu_color_alo_icon_button',
-    //     'label'       => esc_attr__( 'Color of button', 'seopress' ),
-    //     'section'     => 'lacusu_color_alo_icon_sec',
-    //     'default'     => 'rgba(117, 235, 80, 0.5)',
-    //     'choices'     => array(
-    //         'alpha' => true,
-    //     ),
-    //     'priority'    => 10,
-    //     'output' => array(
-    //         array(
-    //             'element'  => '.quick-alo-ph-circle:hover, .quick-alo-ph-circle-fill:hover, .quick-alo-ph-img-circle:hover',
-    //             'property' => 'background-color'
-    //         ),
-    //         array(
-    //             'element'  => '.quick-alo-phone.quick-alo-green:hover .quick-alo-ph-img-circle:hover',
-    //             'property' => 'background-color'
-    //         ),
-    //         array(
-    //             'element'  => '.quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-circle, .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle',
-    //             'property' => 'background-color'
-    //         ),
-    //         array(
-    //             'element'  => '.quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-circle-fill,.quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle-fill',
-    //             'property' => 'background-color'
-    //         )
-    //     ),
-    //     'transport' => 'auto',
-    // ) );
+    Kirki::add_field( 'seopress_config', array(
+        'type'        => 'color',
+        'settings'    => 'lacusu_color_alo_icon_button',
+        'label'       => esc_attr__( 'Color of button', 'seopress' ),
+        'section'     => 'lacusu_color_alo_icon_sec',
+        'default'     => '#00aff2',
+        'choices'     => array(
+            'alpha' => true,
+        ),
+        'priority'    => 10,
+        'output' => array(
+            array(
+                'element'  => '.quick-alo-phone.quick-alo-green .quick-alo-ph-img-circle',
+                'property' => 'background-color'
+            ),
+            array(
+                'element'  => '#quick-alo-wrapper .quick-alo-popup .quick-alo-submit:hover',
+                'property' => 'background-color'
+            ),
+            array(
+                'element'  => '.quick-alo-phone.quick-alo-hover .quick-alo-ph-circle, .quick-alo-phone:hover .quick-alo-ph-circle',
+                'property' => 'background-color'
+            ),
+            array(
+                'element'  => '.quick-alo-phone.quick-alo-green .quick-alo-ph-circle',
+                'property' => 'background-color'
+            )
+        ),
+        'transport' => 'auto',
+    ) );
     //End Color of button
     //End of Color settings
 ?>

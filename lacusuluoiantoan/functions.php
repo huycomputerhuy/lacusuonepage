@@ -96,6 +96,13 @@
         );
     }
 
+    function get_pro_features($post_id){
+         $sum_content  =  get_post_meta($post_id, "wpcf-tom-tat-san-pham", true) ;
+         $sum_content = str_replace( ']]>', ']]&gt;', $sum_content );
+         $sum_content = wpautop($sum_content );
+         return $sum_content;
+    }
+
     // lacusu Breadcrumb.
     function lacusu_breadcrumbs()
     {

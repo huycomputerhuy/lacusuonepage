@@ -98,7 +98,7 @@
                     <?php //} 
                     get_template_part( 'template-parts/contact', 'order' );
                     ?>
-                    <div class="pd-text"> <?php echo get_post_meta($post->ID, "wpcf-tom-tat-san-pham", true) ?> </div>
+                    <div class="pd-text"> <?php echo get_pro_features($post->ID); ?> </div>
                 </div>
        		</li>
 		<?php endwhile; 

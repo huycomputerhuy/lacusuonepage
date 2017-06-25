@@ -67,7 +67,10 @@
 	             	   	?>
 		                <div class="pd-sum"> 
 		                 <span>Tóm tắt sản phẩm</span>
-		                 <p><?php echo get_post_meta($post->ID, "wpcf-tom-tat-san-pham", true) ?>
+		                 <p>
+			                 <?php 
+			                 echo get_pro_features($post->ID);
+			                 ?>
 		                </div>
 					</div>
 				</div>

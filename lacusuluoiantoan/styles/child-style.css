@@ -105,7 +105,7 @@ ul.navbar-nav li a {
     color: #fff;
 }
 
-.tabbox ~ ul {
+.tabbox~ul {
     border: 0px solid #6e9b14;
     margin-bottom: 10px;
 }
@@ -138,7 +138,7 @@ ul.veritem li .pd-img {
     width: 200px;
     float: left;
     margin-right: 10px;
-    min-height: 220px;
+    min-height: 115px;
     position: relative
 }
 
@@ -170,7 +170,7 @@ ul.veritem li .pd-ctn .pd-btn a.order {
     font-size: 11px;
     word-wrap: break-word;
     width: 100px;
-    hfloat: left;
+    /*hfloat: left;*/
     line-height: 20px;
 }
 
@@ -272,7 +272,7 @@ ul.veritem li .pd-ctn h2.pd-tit {
 
 ul.veritem li {
     clear: none;
-    overflow: inherit;
+    overflow: hidden;
     border-bottom: 1px solid #cacaca;
     padding: 0px 10px 9px 0px;
     margin-bottom: 10px;
@@ -282,17 +282,26 @@ ul.veritem li {
 }
 
 ul.veritem li .pd-ctn .pd-text {
-    font-size: 13px;
-    max-height: 92px;
-    min-height: 67px;
-    overflow: hidden;
+    margin-top: 15px;
+    min-height: 20px;
+    padding-right: 25px;
 }
 
-ul.veritem li .pd-ctn .pd-made-in {
-    /*max-height: 67px;
+ul.veritem li .pd-ctn .pd-text p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    /*max-height: 92px;
     min-height: 67px;
     overflow: hidden;*/
 }
+
+
+/*
+ul.veritem li .pd-ctn .pd-made-in {
+    max-height: 67px;
+    min-height: 67px;
+    overflow: hidden;
+}*/
 
 .pro_new_icon {
     display: inherit;
@@ -375,12 +384,11 @@ span.pd-promotion {
     }
     ul.veritem li .pd-img {
         height: auto !important;
-        float: left;
+        /*float: left;*/
         margin-right: 10px;
-        min-height: 50px;
         display: inline-block;
         width: 120px;
-        min-height: 140px;
+        min-height: 125px;
     }
     ul.veritem li .pd-img img {
         max-width: 100%;
@@ -476,9 +484,10 @@ span.pd-promotion {
     position: relative;
 }
 
-.lacusu-ct-left {
-    /*overflow: hidden;*/
-}
+
+/*.lacusu-ct-left {
+    overflow: hidden;
+}*/
 
 .lacusu-ct-left a.img img,
 .lacusu-ct-img {
@@ -522,7 +531,7 @@ span.pd-promotion {
         /*min-height: 140px;*/
     }
     .lacusu-ct-img {
-        height:auto;
+        height: auto;
         margin-right: 10px;
         width: auto;
     }
