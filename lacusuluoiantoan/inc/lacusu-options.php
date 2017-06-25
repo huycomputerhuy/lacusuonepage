@@ -779,9 +779,17 @@
         'priority'    => 10,
         'output' => array(
             array(
-                'element'  => '.quick-alo-phone.quick-alo-hover .quick-alo-ph-circle-fill, .quick-alo-phone:hover .quick-alo-ph-circle-fill',
+                'element'  => '.quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-img-circle, .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-img-circle',
                 'property' => 'background-color'
-            )
+            ),
+            array(
+                'element'  => '.quick-alo-phone.quick-alo-hover .quick-alo-ph-circle, .quick-alo-phone:hover .quick-alo-ph-circle',
+                'property' => 'background-color'
+            ),
+            array(
+                'element'  => '.quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle',
+                'property' => 'border-color'
+            ),
         ),
         'transport' => 'auto',
     ) );
@@ -802,15 +810,11 @@
                 'property' => 'background-color'
             ),
             array(
-                'element'  => '#quick-alo-wrapper .quick-alo-popup .quick-alo-submit:hover',
-                'property' => 'background-color'
-            ),
-            array(
-                'element'  => '.quick-alo-phone.quick-alo-hover .quick-alo-ph-circle, .quick-alo-phone:hover .quick-alo-ph-circle',
-                'property' => 'background-color'
-            ),
-            array(
                 'element'  => '.quick-alo-phone.quick-alo-green .quick-alo-ph-circle',
+                'property' => 'border-color'
+            ),
+            array(
+                'element'  => '.quick-alo-phone.quick-alo-green .quick-alo-ph-circle-fill',
                 'property' => 'background-color'
             )
         ),
