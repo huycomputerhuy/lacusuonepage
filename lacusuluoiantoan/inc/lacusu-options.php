@@ -617,6 +617,10 @@
             array(
                 'element'  => '.widget_sidebar_main .right-widget-title',
                 'property' => 'background-color',
+            ),
+            array(
+                'element'  => '.lacusu-pro-type-title',
+                'property' => 'background-color',
             )
         ),
         'transport' => 'auto',
@@ -636,6 +640,10 @@
             array(
                 'element'  => '.widget_sidebar_main .right-widget-title',
                 'property' => 'color',
+            ),
+            array(
+                'element'  => '.lacusu-pro-type-title',
+                'property' => 'color',
             )
         ),
         'transport' => 'auto',
@@ -654,6 +662,11 @@
         'output' => array(
             array(
                 'element'  => '.widget_sidebar_main .right-widget-title',
+                'property' => 'font-size',
+                'suffix' => 'px !important'
+            ),
+            array(
+                'element'  => '.lacusu-pro-type-title',
                 'property' => 'font-size',
                 'suffix' => 'px !important'
             )

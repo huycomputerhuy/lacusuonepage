@@ -88,7 +88,7 @@ get_header(); ?>
                     <div class="tabbox">
                         <ul class="tablist">
                             <li>
-                                <a class="seopressbtn" href='<?php echo get_category_link($product_type->term_id)?>'><?php echo $product_type->name ?></a>
+                                <a class="lacusu-pro-type-title" href='<?php echo get_category_link($product_type->term_id)?>'><?php echo $product_type->name ?></a>
                             </li>
                         </ul>
                     </div> <!-- End tabtitle --> 
