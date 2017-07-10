@@ -64,7 +64,7 @@ get_header(); ?>
             <div class="tabbox">
                 <ul class="tablist">
                     <li>
-                        <a class="seopressbtn" href='<?php echo get_category_link($category->term_id)?>'><?php echo single_cat_title() ?></a>
+                        <a class="lacusu-pro-type-title" href='<?php echo get_category_link($category->term_id)?>'><?php echo single_cat_title() ?></a>
                     </li>
                 </ul>
             </div> <!-- End tabtitle --> 

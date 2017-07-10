@@ -588,7 +588,7 @@
             array(
                 'element'  => '.seopressbtn',
                 'property' => 'font-size',
-                'suffix' => 'px'
+                'suffix' => 'px !important'
             )
         ),
         'transport' => 'auto',

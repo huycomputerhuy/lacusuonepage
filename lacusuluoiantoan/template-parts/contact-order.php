@@ -1,7 +1,7 @@
 <div class="pd-btn">
-    <a class="order seopressbtn" style="cursor: pointer;" data-toggle="modal" data-target="#order-call">
+    <button class="seopressbtn" style="cursor: pointer;" data-toggle="modal" data-target="#order-call">
       Mua hàng
-    </a>
+    </button>
 </div>
 <!-- Modal -->
 <div id="order-call" class="modal fade" role="dialog">
