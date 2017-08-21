@@ -1,10 +1,14 @@
+
+<?php $rand = substr(md5(microtime()),rand(0,26),5); 
+  $orderCallID = "order-call-".$rand;
+?>
 <div class="pd-btn">
-    <button class="seopressbtn" style="cursor: pointer;" data-toggle="modal" data-target="#order-call">
+    <button class="seopressbtn" style="cursor: pointer;" data-toggle="modal" data-target="<?php echo "#".$orderCallID ?>">
       Mua hàng
     </button>
 </div>
 <!-- Modal -->
-<div id="order-call" class="modal fade" role="dialog">
+<div id="<?php echo $orderCallID ?>" class="order-call modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->

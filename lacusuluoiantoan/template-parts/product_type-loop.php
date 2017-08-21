@@ -70,13 +70,13 @@
                     	</a>
                 		<?php if(get_post_meta($post->ID, "wpcf-san-pham-moi")[0] == 1) { ?>
                     	<span>	
-                    		<img class="pro_new_icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pro_new.gif">
+                    		<img class="pro_new_icon" alt="Sản phầm mới" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pro_new.gif">
                     	</span>
                     	<?php } ?>
 
                     	<?php if(get_post_meta($post->ID, "wpcf-san-pham-hot")[0] == 1) { ?>
                     	<span>	
-                    		<img class="pro_new_icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pro_hot.gif">
+                    		<img class="pro_new_icon" alt="Sản phầm bán chạy" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pro_hot.gif">
                     	</span>
                     	<?php } ?>
 
